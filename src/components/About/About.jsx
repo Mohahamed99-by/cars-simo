@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaCar, FaAward, FaClock, FaHeadset } from 'react-icons/fa';
-import CarPng from "../../assets/car1.png";
+import CarPng from "../../assets/car-hero.png.jpg";
 
 const features = [
   {
@@ -53,7 +53,7 @@ const About = () => {
                   <img
                     src={CarPng}
                     alt="Luxury Car"
-                    className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+                    className="w-full rounded-3xl h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
 
