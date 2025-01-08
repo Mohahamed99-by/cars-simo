@@ -9,7 +9,7 @@ const carList = [
     id: 1,
     name: "Mercedes-Benz EQS",
     price: 299,
-    image: "https://images.unsplash.com/photo-1655226017633-90bfcf7b4588?w=800&auto=format&fit=crop",
+    image: "https://rpmweb.ca/medias/Mercedes-Benz-EQS-580-4MATIC-2025-2.JPG",
     specs: {
       mileage: "Electric",
       transmission: "Automatic",
@@ -34,7 +34,7 @@ const carList = [
     id: 2,
     name: "Porsche Taycan",
     price: 349,
-    image: "https://images.unsplash.com/photo-1619767886558-efdc259cde1a?w=800&auto=format&fit=crop",
+    image: "https://file.kelleybluebookimages.com/kbb/base/house/2025/2025-Porsche-Taycan-FrontSide_PSTAY2501_640x480.jpg?downsize=750:*",
     specs: {
       mileage: "Electric",
       transmission: "2-Speed",
@@ -59,7 +59,7 @@ const carList = [
     id: 3,
     name: "BMW iX M60",
     price: 279,
-    image: "https://images.unsplash.com/photo-1655226018673-7a5c6c36e707?w=800&auto=format&fit=crop",
+    image: "https://www.annonces-automobile.com/images/data/actualite/2022/03/images/ixm60-3.jpg",
     specs: {
       mileage: "Electric",
       transmission: "Automatic",
@@ -84,7 +84,7 @@ const carList = [
     id: 4,
     name: "Audi RS e-tron GT",
     price: 329,
-    image: "https://images.unsplash.com/photo-1656468014942-fcac1379f43b?w=800&auto=format&fit=crop",
+    image: "https://static.moniteurautomobile.be/imgcontrol/images_tmp/clients/moniteur/c1440-d720/content/medias/images/news/36000/600/10/audi-etron_gt_2.jpg",
     specs: {
       mileage: "Electric",
       transmission: "2-Speed",
@@ -109,7 +109,7 @@ const carList = [
     id: 5,
     name: "Lucid Air Dream",
     price: 399,
-    image: "https://images.unsplash.com/photo-1656468014942-fcac1379f43b?w=800&auto=format&fit=crop",
+    image: "https://bringatrailer.com/wp-content/uploads/2022/04/198A1586-LowRes-01241-scaled.jpg?fit=940%2C627",
     specs: {
       mileage: "Electric",
       transmission: "Automatic",
@@ -129,6 +129,31 @@ const carList = [
     capacity: "5 Passengers",
     luggage: "739L Capacity",
     aosDelay: "2000",
+  },
+  {
+    id: 6,
+    name: "Tesla Model S",
+    price: 599,
+    image: "https://upload.wikimedia.org/wikipedia/commons/8/82/Tesla_Model_S_(Facelift_ab_04-2016)_trimmed.jpg",
+    specs: {
+      mileage: "Electric",
+      transmission: "Automatic",
+      fuelType: "Electric"
+    },
+    features: [
+      "Dual Motor",
+      "Dual Motor",
+      "Dual Motor",
+      "Dual Motor",
+      "Dual Motor",
+      "Dual Motor",
+      "Dual Motor",
+      "Dual Motor",
+    ],
+    performance: "0-60 mph in 3.1s",
+    capacity: "5 Passengers",
+    luggage: "500L Capacity",
+    aosDelay: "2500",
   }
 ];
 

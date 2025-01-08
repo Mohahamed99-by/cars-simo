@@ -62,7 +62,7 @@ const About = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] sm:w-4/5"
+                  className="absolute -bottom-6 transform -translate-x-1/2 w-[90%] sm:w-4/5"
                 >
                   <div className="glass-card rounded-2xl p-3 sm:p-4 grid grid-cols-3 gap-2 sm:gap-4">
                     <div className="text-center">

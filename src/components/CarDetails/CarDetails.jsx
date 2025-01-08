@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaGasPump, FaCog, FaTachometerAlt, FaUsers, FaSuitcase, FaCalendarAlt, FaCheck, FaArrowLeft, FaChargingStation, FaBatteryFull, FaWifi } from 'react-icons/fa';
-import { IoSpeedometer, IoFlash } from 'react-icons/io5';
+import { FaGasPump, FaCog, FaTachometerAlt, FaUsers, FaSuitcase, FaCalendarAlt, FaCheck, FaArrowLeft, FaChargingStation, FaBatteryFull, FaWifi, FaList, FaDollarSign, FaClock, FaCalendarWeek, FaRegCalendarAlt } from 'react-icons/fa';
+import { IoSpeedometer, IoFlash, IoStatsChart } from 'react-icons/io5';
 
 const CarDetails = ({ car, onBack, onBookNow }) => {
   const [selectedTab, setSelectedTab] = useState('specs');
@@ -81,17 +81,22 @@ const CarDetails = ({ car, onBack, onBookNow }) => {
 
               {/* Tabs Navigation */}
               <div className="flex flex-wrap gap-2 sm:gap-4 mb-6 sm:mb-8">
-                {['specs', 'features', 'pricing'].map((tab) => (
+                {[
+                  { id: 'specs', icon: <IoStatsChart />, label: 'Specs' },
+                  { id: 'features', icon: <FaList />, label: 'Features' },
+                  { id: 'pricing', icon: <FaDollarSign />, label: 'Pricing' }
+                ].map((tab) => (
                   <button
-                    key={tab}
-                    onClick={() => setSelectedTab(tab)}
-                    className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 ${
-                      selectedTab === tab
+                    key={tab.id}
+                    onClick={() => setSelectedTab(tab.id)}
+                    className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition-all duration-300 flex items-center gap-2 ${
+                      selectedTab === tab.id
                         ? 'bg-gradient-custom text-white shadow-lg'
                         : 'glass-effect text-gray-700 dark:text-gray-300 hover:scale-105'
                     }`}
                   >
-                    {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                    {tab.icon}
+                    {tab.label}
                   </button>
                 ))}
               </div>
@@ -155,6 +160,7 @@ const CarDetails = ({ car, onBack, onBookNow }) => {
                   >
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                       <div className="glass-effect rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center">
+                        <FaClock className="w-6 h-6 sm:w-8 sm:h-8 mx-auto text-gradient-custom mb-2 sm:mb-3" />
                         <h3 className="text-lg sm:text-xl font-bold mb-2">Daily</h3>
                         <p className="text-2xl sm:text-3xl font-bold text-gradient-custom">${car.price}</p>
                         <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-2">Per Day</p>
@@ -163,11 +169,13 @@ const CarDetails = ({ car, onBack, onBookNow }) => {
                         <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-custom text-white text-xs px-3 sm:px-4 py-1 rounded-full">
                           Popular
                         </div>
+                        <FaCalendarWeek className="w-6 h-6 sm:w-8 sm:h-8 mx-auto text-gradient-custom mb-2 sm:mb-3" />
                         <h3 className="text-lg sm:text-xl font-bold mb-2">Weekly</h3>
                         <p className="text-2xl sm:text-3xl font-bold text-gradient-custom">${car.price * 6}</p>
                         <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-2">Per Week</p>
                       </div>
                       <div className="glass-effect rounded-xl sm:rounded-2xl p-4 sm:p-6 text-center">
+                        <FaRegCalendarAlt className="w-6 h-6 sm:w-8 sm:h-8 mx-auto text-gradient-custom mb-2 sm:mb-3" />
                         <h3 className="text-lg sm:text-xl font-bold mb-2">Monthly</h3>
                         <p className="text-2xl sm:text-3xl font-bold text-gradient-custom">${car.price * 25}</p>
                         <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-2">Per Month</p>
